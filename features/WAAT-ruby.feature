@@ -1,9 +1,5 @@
-Feature: something something
-  In order to something something
-  A user something something
-  something something something
+Feature: Check if tags are reported when my blog page is opened
 
-  Scenario: something something
-    Given inspiration
-    When I create a sweet new gem
-    Then everyone should see how awesome I am
+  @waat
+  Scenario: Tags reported on loading blog page
+    Given I navigate to Anand Bagmar's blog

@@ -1,4 +1,6 @@
 require 'bundler'
+require 'selenium-webdriver'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
