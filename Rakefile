@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "WAAT-ruby"
+  gem.name = "WAAT"
   gem.homepage = "http://github.com/Anand Bagmar/WAAT-ruby"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.license = "Apache 2.0"
+  gem.summary = %Q{Web Analytics Automation Testing Framework}
+  gem.description = %Q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}
   gem.email = "abagmar@gmail.com"
   gem.authors = ["Anand Bagmar"]
   # dependencies defined in Gemfile
