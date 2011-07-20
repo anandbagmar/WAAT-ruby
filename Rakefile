@@ -21,29 +21,16 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}
   gem.email = "abagmar@gmail.com"
   gem.authors = ["Anand Bagmar"]
+
   # dependencies defined in Gemfile
+  gem.add_dependency('rjb', ">= 1.3.2")
 end
 Jeweler::RubygemsDotOrgTasks.new
-
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
 
 require 'cucumber/rake/task'
 Cucumber::Rake::Task.new(:features)
 
-task :default => :test
+task :default => :features
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
