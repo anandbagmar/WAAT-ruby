@@ -6,6 +6,7 @@
  *
  * Copyright 2010 Anand Bagmar.  Distributed under the Apache 2.0 License
  *
+ * See LICENSE.txt for further details.
 **/
 
 == What is Web Analytics
@@ -18,7 +19,7 @@ Official definition of Web Analytics from Wikipedia[http://en.wikipedia.org/wiki
 
 == What is WAAT?
 
-<b>WAAT = Web Analytics Automation Testing.</b>
+<b>{WAAT = Web Analytics Automation Testing.}[http://essenceoftesting.blogspot.com/search/label/waat]</b>
 
 == Need for WAAT
 
@@ -38,25 +39,3 @@ For any other questions, comments, help, email Anand Bagmar @ abagmar@gmail.com
 == Latest version
 * <b>WAAT-Ruby will be available soon.</b>
 * <b>WAAT-Java v1.3 is available from the {WAAT-Java dist}[https://github.com/anandbagmar/WAAT/tree/master/dist] folder.</b>
-
-== Contributing to WAAT-ruby
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
-== Copyright
-
-/**
- * Created by: Anand Bagmar
- * Email: abagmar@gmail.com
- *
- * Copyright 2010 Anand Bagmar.  Distributed under the Apache 2.0 License
- *
-**/
-
-See LICENSE.txt for further details.
