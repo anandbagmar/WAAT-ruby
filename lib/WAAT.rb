@@ -34,7 +34,7 @@ module WAAT
     @log.info("\tTest Data File Name: #{test_data_file_name}")
     @log.info("\tAction Name: #{action_name}")
     java_result = @engine_instance.verifyWebAnalyticsData(test_data_file_name, action_name, url_patterns, minimum_number_of_packets)
-    return Result.new(java_result)
+    Result.new(java_result)
   end
 
   private

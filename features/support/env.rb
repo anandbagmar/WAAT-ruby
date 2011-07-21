@@ -19,9 +19,9 @@ require 'test/unit/assertions'
 #
 #
 
-@WAAT_SRC = File.join(File.dirname(__FILE__), "..", "..", "lib", "WAAT")
-puts "@WAAT_root_location: #{@WAAT_SRC}"
-require @WAAT_SRC
+@waat_src = File.join(File.dirname(__FILE__), "..", "..", "lib", "WAAT")
+puts "@WAAT_root_location: #{@waat_src}"
+require @waat_src
 
 #   end WAAT configuration
 
