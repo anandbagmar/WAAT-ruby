@@ -14,13 +14,13 @@ Web Analytics is the measurement, collection, analysis and reporting of internet
 Web Analytics applications can also help companies measure the results of traditional print advertising campaigns. It helps one to estimate how the traffic to the web site changed after the launch of a new advertising campaign.
 
 Web Analytics provides data on the number of visitors, page views, etc. to gauge the traffic popularity trends which helps doing the market research.
-Official definition of Web Analytics from Wikipedia (http://en.wikipedia.org/wiki/Web_analytics)
+Official definition of Web Analytics from Wikipedia[http://en.wikipedia.org/wiki/Web_analytics)]
 
 == What is WAAT?
 
 <b>WAAT = Web Analytics Automation Testing.</b>
 
-=== Need for WAAT
+== Need for WAAT
 
 * Manual testing for Web Analytics is tedious and time consuming (and also boring).
 * It is possible to miss out on some of the tags for testing that will provide a feed to the Web Analytic system.
@@ -32,12 +32,12 @@ For any other questions, comments, help, email Anand Bagmar @ abagmar@gmail.com
 == What is WAAT-Ruby?
 
 * WAAT-Ruby is a Ruby wrapper around WAAT-Java. I have created a Ruby wrapper that uses RJB (Ruby-Java-Bridge) to invoke APIs defined by WAAT to enable Web Analytics Testing.
-* See the WAAT (Java) project here http://github.com/anandbagmar/WAAT for more specifics.
-* See my blog for all activity around WAAT - http://essenceoftesting.blogspot.com/search/label/waat
+* See the {WAAT (Java) project}[http://github.com/anandbagmar/WAAT] for more specifics.
+* See {my blog}[http://essenceoftesting.blogspot.com/search/label/waat] for all activity around WAAT
 
-=== Latest version
+== Latest version
 * <b>WAAT-Ruby will be available soon.</b>
-* <b>WAAT-Java v1.3 is available from the WAAT-Java dist folder (https://github.com/anandbagmar/WAAT/tree/master/dist).</b>
+* <b>WAAT-Java v1.3 is available from the {WAAT-Java dist}[https://github.com/anandbagmar/WAAT/tree/master/dist] folder.</b>
 
 == Contributing to WAAT-ruby
  
