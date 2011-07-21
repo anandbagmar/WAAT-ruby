@@ -18,28 +18,26 @@ Official definition of Web Analytics from Wikipedia (http://en.wikipedia.org/wik
 
 == What is WAAT?
 
-WAAT stands for Web Analytics Automation Testing.
-
-== What is WAAT-Ruby?
-
-WAAT-Ruby is a Ruby wrapper around WAAT-Java. I have created a Ruby wrapper that uses RJB (Ruby-Java-Bridge) to invoke APIs defined by WAAT to enable Web Analytics Testing.
-See the WAAT (Java) project here http://github.com/anandbagmar/WAAT for more specifics.
-
-=== Latest version
-Latest version of WAAT-Ruby will be available soon.
-Latest version of WAAT-Java v1.3 is available from the WAAT-Java dist folder (https://github.com/anandbagmar/WAAT/tree/master/dist).
+<b>WAAT = Web Analytics Automation Testing.</b>
 
 === Need for WAAT
-> Manual testing for Web Analytics is tedious and time consuming (and also boring).
-> It is possible to miss out on some of the tags for testing that will provide a feed to the Web Analytic system.
+
+* Manual testing for Web Analytics is tedious and time consuming (and also boring).
+* It is possible to miss out on some of the tags for testing that will provide a feed to the Web Analytic system.
 
 This framework provides a way to automate the verification of name-value pair properties / tags being reported to a Web Analytics System.
 
-The idea for the WAAT was initially incubated as part of a project for Sears.  The author greatly appreciates Sears' support of releasing the WAAT to the public.
-
 For any other questions, comments, help, email Anand Bagmar @ abagmar@gmail.com
 
-Description goes here.
+== What is WAAT-Ruby?
+
+* WAAT-Ruby is a Ruby wrapper around WAAT-Java. I have created a Ruby wrapper that uses RJB (Ruby-Java-Bridge) to invoke APIs defined by WAAT to enable Web Analytics Testing.
+* See the WAAT (Java) project here http://github.com/anandbagmar/WAAT for more specifics.
+* See my blog for all activity around WAAT - http://essenceoftesting.blogspot.com/search/label/waat
+
+=== Latest version
+* <b>WAAT-Ruby will be available soon.</b>
+* <b>WAAT-Java v1.3 is available from the WAAT-Java dist folder (https://github.com/anandbagmar/WAAT/tree/master/dist).</b>
 
 == Contributing to WAAT-ruby
  
