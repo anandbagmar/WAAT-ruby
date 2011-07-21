@@ -1,3 +1,12 @@
+#**
+# * Created by: Anand Bagmar
+# * Email: abagmar@gmail.com
+# * Date: Dec 29, 2010
+# * Time: 9:34:02 AM
+# *
+# * Copyright 2010 Anand Bagmar (abagmar@gmail.com).  Distributed under the Apache 2.0 License
+#**
+
 # encoding: utf-8
 
 require 'rubygems'
@@ -23,7 +32,7 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ["Anand Bagmar"]
 
   # dependencies defined in Gemfile
-  gem.add_dependency('rjb', ">= 1.3.2")
+#  gem.add_dependency('rjb', ">= 1.3.2")
 end
 Jeweler::RubygemsDotOrgTasks.new
 
