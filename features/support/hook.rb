@@ -13,8 +13,7 @@ end
 
 Before ('@waat') do
   puts "*** Before hook for WAAT ***"
-#  initialize_waat("omniture_debugger", "xml")
-  initialize_waat("http_sniffer", "xml")
+  initialize_waat()
   enable_web_analytics_testing
 end
 

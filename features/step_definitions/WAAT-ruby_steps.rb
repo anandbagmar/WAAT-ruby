@@ -14,8 +14,7 @@ Given /^I navigate to Anand Bagmar's blog$/ do
   action_name = "OpenWAATArticleOnBlog_HttpSniffer"
   input_data_file_name = File.join(File.dirname(__FILE__), "..", "..", "sampleData", "TestData.xml")
 
-#  initialize_waat("omniture_debugger", "xml")
-#  initialize_waat("http_sniffer", "xml")
+#  initialize_waat()
 #
 #  enable_web_analytics_testing
 

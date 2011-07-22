@@ -20,12 +20,13 @@ module WAAT
     end
   end
 
-  def initialize_waat(web_analytic_tool, input_file_type, keep_loaded_file_in_memory = true, log4j_properties_absolute_file_path = File.join(File.dirname(__FILE__), "WAAT", "resources", "log4j.properties"))
+  def initialize_waat(keep_loaded_file_in_memory = true)
+    log4j_properties_absolute_file_path = File.join(File.dirname(__FILE__), "WAAT", "resources", "log4j.properties")
     @log = Logger.new(STDOUT)
     @log.level = Logger::INFO
     @log.info("Initializing WAAT")
     load_java_classes
-    @engine_instance = @controller.getInstance(web_analytic_tool(web_analytic_tool), input_file_type(input_file_type), keep_loaded_file_in_memory, log4j_properties_absolute_file_path)
+    @engine_instance = @controller.getInstance(web_analytic_tool("http_sniffer"), input_file_type("xml"), keep_loaded_file_in_memory, log4j_properties_absolute_file_path)
   end
 
   def enable_web_analytics_testing

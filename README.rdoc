@@ -30,13 +30,26 @@ This framework provides a way to automate the verification of name-value pair pr
 
 For any other questions, comments, help, email Anand Bagmar @ abagmar@gmail.com
 
-== Platforms supported
+== How does WAAT-Ruby work?
 
 * <b>{WAAT was originally written in Java}[http://github.com/anandbagmar/WAAT]</b>.
 * <b>{WAAT-Ruby}[http://github.com/anandbagmar/WAAT-Ruby] is a Ruby gem implemented using WAAT-Java</b>. The Ruby wrapper uses RJB (Ruby-Java-Bridge) to invoke APIs defined by WAAT-Java to enable Web Analytics Testing.
-* See <b><em>{my blog}[http://essenceoftesting.blogspot.com/search/label/waat] for all activity around WAAT</em></b>.
+
+** <b>WAAT-Ruby only supports the Http-Sniffer approach of WAAT.</b>
+** <b>Omniture Debugger is NOT supported by WAAT-Ruby</b>
+
+=== Installation instructions
+
+* WAAT-Ruby is a wrapper over WAAT-Java. In order to use this gem, first <b>setup WAAT-Java by following the {WAAT Readme}[http://github.com/anandbagmar/WAAT/tree/master/docs]</b>.
+
+
 
 == Latest version
 
 * <b>WAAT-Ruby will be available soon.</b>
 * <b>WAAT-Java v1.3 is available from the {WAAT-Java dist}[http://github.com/anandbagmar/WAAT/tree/master/dist] folder.</b>
+
+
+
+== Documentation, FAQ
+
