@@ -5,6 +5,11 @@
 # * Time: 9:34:02 AM
 # *
 # * Copyright 2010 Anand Bagmar (abagmar@gmail.com).  Distributed under the Apache 2.0 License
+# *
+# * http://essenceoftesting.blogspot.com/search/label/waat
+# * http://github.com/anandbagmar/WAAT-Ruby
+# * http://github.com/anandbagmar/WAAT
+# *
 #**
 
 require 'bundler'
