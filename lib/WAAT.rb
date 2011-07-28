@@ -56,12 +56,11 @@ module WAAT
   #
   #
   def initialize_waat(keep_loaded_file_in_memory = true)
-    log4j_properties_absolute_file_path = File.join(File.dirname(__FILE__), "WAAT", "resources", "log4j.properties")
-    @log = Logger.new(STDOUT)
-    @log.level = Logger::INFO
-    @log.info("Initializing WAAT")
+    logger = Logger.new(STDOUT)
+    logger.level = Logger::INFO
+    logger.info("Initializing WAAT")
     load_java_classes
-    @engine_instance = @controller.getInstance(web_analytic_tool("http_sniffer"), input_file_type("xml"), keep_loaded_file_in_memory, log4j_properties_absolute_file_path)
+    engine_instance(keep_loaded_file_in_memory)
   end
 
   #
@@ -74,8 +73,8 @@ module WAAT
   #      When this method is called, the packet capturing is started on all the network interfaces on the machine where the tests are running.
   #
   def enable_web_analytics_testing
-    @log.info("Enable Web Analytics Testing")
-    @engine_instance.enableWebAnalyticsTesting
+    logger.info("Enable Web Analytics Testing")
+    engine_instance.enableWebAnalyticsTesting
   end
 
   #
@@ -88,8 +87,8 @@ module WAAT
   #      When this method is called, the packet capturing is stopped for all the network interfaces on the machine where the tests are running.
   #
   def disable_web_analytics_testing
-    @log.info("Disable Web Analytics Testing")
-    @engine_instance.disableWebAnalyticsTesting
+    logger.info("Disable Web Analytics Testing")
+    engine_instance.disableWebAnalyticsTesting
   end
 
   #
@@ -97,58 +96,78 @@ module WAAT
   # This method verifies the Web Analytic tags using the http_sniffer mechanism
   #
   # === Args
-  # *test_data_file_name*:
+  # params Hash with the following entries
+  #
+  # *:test_data_file_name*:
   # Absolute path to the input Test Data (xml) file name.
   #
-  # *action_name*:
+  # *:action_name*:
   # A (String) name representing the action done in the UI, for which we want to do Web Analytics Testing.
   # This action_name matches the corresponding name in the test_data_file_name
   #
-  # *url_patterns*:
+  # *:url_patterns*:
   # An array of Strings containing URL snippets that will be used to filter the packets captured by HttpSniffer
   #
-  # *minimum_number_of_packets*:
+  # *:minimum_number_of_packets*:
   # The minimum number of "filtered" packets to capture based on the url_patterns provided
   #
   # === Examples:
   #
-  # * verify_web_analytics_data(input_data_file_name, action_name, url_patterns, minimum_number_of_packets) => This will enable Web Analytic Testing
+  # * verify_web_analytics_data({:test_data_file_name, :action_name, :url_patterns, :minimum_number_of_packets}) => This will enable Web Analytic Testing
   #   where:
-  #     input_data_file_name        => File.join(File.dirname(__FILE__), "..", "..", "sampleData", "TestData.xml")
-  #     action_name                 => "OpenWAATArticleOnBlog_HttpSniffer"
-  #     url_patterns                => ["GET /ps/ifr?container=friendconnect&mid=0"]
-  #     minimum_number_of_packets   => 1
+  #     :test_data_file_name         => File.join(File.dirname(__FILE__), "..", "..", "sampleData", "TestData.xml")
+  #     :action_name                 => "OpenWAATArticleOnBlog_HttpSniffer"
+  #     :url_patterns                => ["GET /ps/ifr?container=friendconnect&mid=0"]
+  #     :minimum_number_of_packets   => 1
   #
   # === Corresponding WAAT-Java API
   # verifyWebAnalyticsData(test_data_file_name, action_name, url_patterns, minimum_number_of_packets)::
   #      This method enables Web Analytic testing in WAAT-Java
   #      When this method is called, the packet capturing is started on all the network interfaces on the machine where the tests are running.
   #
-  def verify_web_analytics_data(test_data_file_name, action_name, url_patterns, minimum_number_of_packets)
-    @log.info("Verify Web Analytics Data")
-    @log.info("\tTest Data File Name: #{test_data_file_name}")
-    @log.info("\tAction Name: #{action_name}")
-    java_result = @engine_instance.verifyWebAnalyticsData(test_data_file_name, action_name, url_patterns, minimum_number_of_packets)
+  def verify_web_analytics_data(params)
+    logger.info("Verify Web Analytics Data")
+    logger.info("\tTest Data File Name: #{params[:test_data_file_name]}")
+    logger.info("\tAction Name: #{params[:action_name]}")
+    java_result = @engine_instance.verifyWebAnalyticsData(params[:test_data_file_name], params[:action_name], params[:url_patterns], params[:minimum_number_of_packets])
     Result.new(java_result)
   end
 
   private
+  def logger
+    @logger ||= Logger.new(STDOUT)
+    @logger.level = Logger::INFO
+    @logger
+  end
+
+  def engine_instance(keep_loaded_file_in_memory = true)
+    log4j_properties_absolute_file_path = File.join(File.dirname(__FILE__), "WAAT", "resources", "log4j.properties")
+    @engine_instance ||=  controller.getInstance(web_analytic_tool("http_sniffer"), input_file_type("xml"), keep_loaded_file_in_memory, log4j_properties_absolute_file_path)
+  end
+
+  def controller
+    @controller ||= Rjb::import('com.thoughtworks.webanalyticsautomation.Controller')
+  end
+
+  def input_file_type_reference
+    @input_file_type_reference ||= Rjb::import('com.thoughtworks.webanalyticsautomation.inputdata.InputFileType')
+  end
+
+  def web_analytic_tool_reference
+    @web_analytic_tool_reference ||= Rjb::import('com.thoughtworks.webanalyticsautomation.plugins.WebAnalyticTool')
+  end
+
   def load_java_classes
     separator = (Config::CONFIG['target_os'] =~ /[win|mingw]/) == 0 ? ';' : ':'
 
     waat_lib_directory = File.join(File.dirname(__FILE__), "WAAT", "lib")
-    @log.info("WAAT LIB directory: #{waat_lib_directory}")
+    logger.info("WAAT LIB directory: #{waat_lib_directory}")
 
     waat_file_list = Dir.glob("#{waat_lib_directory}/*.jar").join(separator)
-    @log.info("Loading following JARs: #{waat_file_list}")
+    logger.info("Loading following JARs: #{waat_file_list}")
 
     require 'rjb'
     Rjb::load(classpath = waat_file_list,[])
-
-    @web_analytic_tool_reference = Rjb::import('com.thoughtworks.webanalyticsautomation.plugins.WebAnalyticTool')
-    @input_file_type_reference = Rjb::import('com.thoughtworks.webanalyticsautomation.inputdata.InputFileType')
-    @controller = Rjb::import('com.thoughtworks.webanalyticsautomation.Controller')
-    @engine_instance = nil
   end
 
   def proxy_from_java_enum(java_enum, web_analytic_tool)
@@ -158,11 +177,11 @@ module WAAT
   end
 
   def web_analytic_tool(web_analytic_tool)
-    proxy_from_java_enum(@web_analytic_tool_reference, web_analytic_tool)
+    proxy_from_java_enum(web_analytic_tool_reference, web_analytic_tool)
   end
 
   def input_file_type(input_file_type)
-    proxy_from_java_enum(@input_file_type_reference, input_file_type)
+    proxy_from_java_enum(input_file_type_reference, input_file_type)
   end
 
 end

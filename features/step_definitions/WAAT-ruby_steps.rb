@@ -27,7 +27,8 @@ Given /^I navigate to Anand Bagmar's blog$/ do
   @driver = Selenium::WebDriver.for :firefox
   @driver.get url
 
-  result = verify_web_analytics_data(input_data_file_name, action_name, url_patterns, 1)
+  params = [:input_data_file_name => input_data_file_name, :action_name => action_name, :url_patterns => url_patterns, :minimum_number_of_packets => 1]
+  result = verify_web_analytics_data(params)
 
   puts "->#{result.status}"
   assert (result.status=="FAIL"), "Incorrect Verification Status. Expected: 'FAIL', Actual: #{result.status}"
