@@ -24,7 +24,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "WAAT"
-  gem.homepage = "http://github.com/Anand Bagmar/WAAT-ruby"
+  gem.homepage = "http://github.com/anandbagmar/WAAT-ruby"
   gem.license = "Apache 2.0"
   gem.summary = %Q{Web Analytics Automation Testing Framework}
   gem.description = %Q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}

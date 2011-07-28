@@ -59,10 +59,9 @@ Gem::Specification.new do |s|
     "lib/WAAT/sampledata/TestData.xml",
     "lib/WAAT/samplescripts/com/thoughtworks/webanalyticsautomation/scriptrunner/SeleniumScriptRunner.java",
     "lib/WAAT/samplescripts/com/thoughtworks/webanalyticsautomation/scriptrunner/WebDriverScriptRunner.java",
-    "pkg/WAAT-1.4.0.gem",
     "sampledata/TestData.xml"
   ]
-  s.homepage = %q{http://github.com/Anand Bagmar/WAAT-ruby}
+  s.homepage = %q{http://github.com/anandbagmar/WAAT-ruby}
   s.licenses = ["Apache 2.0"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
