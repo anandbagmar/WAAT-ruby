@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "WAAT.gemspec",
     "features/WAAT-ruby.feature",
     "features/step_definitions/WAAT-ruby_steps.rb",
     "features/support/env.rb",
