@@ -39,3 +39,8 @@ For any other questions, comments, help, email Anand Bagmar @ abagmar@gmail.com
 * {WAAT}[http://github.com/anandbagmar/WAAT] for Java.
 * {WAAT}[http://github.com/anandbagmar/WAAT-Ruby] for Ruby. The Ruby gem uses RJB (Ruby-Java-Bridge) to invoke APIs defined by WAAT-Java to enable Web Analytics Testing.
 * <b>See {my blog}[http://essenceoftesting.blogspot.com/search/label/waat] for all activity around WAAT.</b>
+
+
+== How to use WAAT-Ruby?
+
+See {this wiki page}[https://github.com/anandbagmar/WAAT-ruby/wiki/WAAT-Ruby-HttpSniffer] for step-by-step instructions on how to use WAAT-Ruby in your project.
