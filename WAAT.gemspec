@@ -72,7 +72,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<bundler>, ["~> 1.1"])
       s.add_development_dependency(%q<selenium-webdriver>, [">= 2.0.0"])
       s.add_development_dependency(%q<cucumber>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
@@ -85,7 +85,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<ffi>, ["= 1.0.7"])
     end
   else
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.1"])
     s.add_dependency(%q<selenium-webdriver>, [">= 2.0.0"])
     s.add_dependency(%q<cucumber>, [">= 0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
