@@ -16,4 +16,4 @@ group :development do
   gem 'ffi', "1.0.7"
 end
 
-gem "bundler", "~> 1.1"
+gem "bundler", ">= 0"
