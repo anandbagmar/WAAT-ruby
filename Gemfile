@@ -14,6 +14,7 @@ group :development do
   gem "cucumber", ">= 0"
   gem "jeweler", "~> 1.6.4"
   gem 'ffi', "1.0.7"
+  gem 'rjb'
 end
 
 gem "bundler", ">= 0"
