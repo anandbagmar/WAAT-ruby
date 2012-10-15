@@ -16,19 +16,28 @@ Before do
   puts "Generic before hook"
 end
 
-Before ('@waat') do
-  puts "*** Before hook for WAAT ***"
-  initialize_waat()
-  enable_web_analytics_testing
-end
+#Before ('@waat') do
+#  puts "*** Before hook for WAAT ***"
+
+#  If you want to use http_sniffer
+#  initialize_waat(:waat_plugin => "http_sniffer")
+#  enable_web_analytics_testing
+
+#  OR
+
+#  If you want to use js_sniffer
+#  initialize_waat(:waat_plugin => "js_sniffer")
+#end
 
 After do
   puts "Generic after hook"
   @driver.quit
 end
 
-After ('@waat') do
-  puts "*** After hook for WAAT ***"
-  disable_web_analytics_testing
-end
+#After ('@waat') do
+#  puts "*** After hook for WAAT ***"
+
+#  If you want to use http_sniffer
+#  disable_web_analytics_testing
+#end
 

@@ -15,5 +15,8 @@
 Feature: Check if tags are reported when my blog page is opened
 
   @waat
-  Scenario: Tags reported on loading blog page
-    Given I navigate to Anand Bagmar's blog
+  Scenario: Tags reported on loading blog page - HttpSniffer
+    Given I navigate to Anand Bagmar's blog - HttpSniffer
+
+  Scenario: Tags reported on loading blog page - JsSniffer
+    Given I navigate to some page - JsSniffer
