@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{WAAT}
-  s.version = "1.4.1"
+  s.version = "1.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anand Bagmar"]
-  s.date = %q{2012-09-25}
+  s.date = %q{2012-10-15}
   s.description = %q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}
   s.email = %q{abagmar@gmail.com}
   s.extra_rdoc_files = [
@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
     "lib/WAAT/docs/WAAT Readme.docx",
     "lib/WAAT/docs/WAAT Readme.html",
     "lib/WAAT/docs/WAAT Readme.pdf",
-    "lib/WAAT/lib/WAAT_v1.4.jar",
+    "lib/WAAT/lib/WAAT_v1.5.0.jar",
     "lib/WAAT/lib/commons-lang-2.3.jar",
     "lib/WAAT/lib/httpSniffer/Linux/jpcap-0.7-1.i386.rpm",
     "lib/WAAT/lib/httpSniffer/Linux/jpcap-0.7.deb",
@@ -77,12 +77,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<cucumber>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<ffi>, ["= 1.0.7"])
+      s.add_development_dependency(%q<rjb>, [">= 0"])
     else
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<selenium-webdriver>, [">= 2.0.0"])
       s.add_dependency(%q<cucumber>, [">= 0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<ffi>, ["= 1.0.7"])
+      s.add_dependency(%q<rjb>, [">= 0"])
     end
   else
     s.add_dependency(%q<bundler>, [">= 0"])
@@ -90,6 +92,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<cucumber>, [">= 0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<ffi>, ["= 1.0.7"])
+    s.add_dependency(%q<rjb>, [">= 0"])
   end
 end
 
