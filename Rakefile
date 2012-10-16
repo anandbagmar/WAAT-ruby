@@ -30,6 +30,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}
   gem.email = "abagmar@gmail.com"
   gem.authors = ["Anand Bagmar"]
+  gem.files.exclude "dist/**/*"
 
   # dependencies defined in Gemfile
 #  gem.add_dependency('rjb', ">= 1.3.2")
