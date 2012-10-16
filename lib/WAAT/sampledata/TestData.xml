@@ -48,9 +48,9 @@
 -->
 
 <Sections>
-    <Section actionName="OpenUpcomingPage_OmnitureDebugger_Selenium"
-             numberOfEventsTriggered="1"
-             tagList="s.pageName = 'upcoming:index'||
+  <Section actionName="OpenUpcomingPage_OmnitureDebugger_Selenium"
+           numberOfEventsTriggered="1"
+           tagList="s.pageName = 'upcoming:index'||
                                 s.eVar23 = 'upcoming:index'||
                                 s.heir1 = 'upcoming'||
                                 s.heir2 = 'index'||
@@ -64,23 +64,29 @@
                                 s.eVar9 = 'all'||
                                 s.events = 'event2'||"/>
 
-    <Section actionName="OpenUpcomingPage_OmnitureDebugger_WebDriver"
-             numberOfEventsTriggered="1"
-             tagList="pageName=upcoming:index||
+  <Section actionName="OpenUpcomingPage_OmnitureDebugger_WebDriver"
+           numberOfEventsTriggered="1"
+           tagList="pageName=upcoming:index||
                                 cc=USD||
                                 ch=upcoming||
                                 events=event2||"/>
 
-    <Section actionName="OpenUpcomingPage_HttpSniffer"
-             numberOfEventsTriggered="1"
-             tagList="pageName=upcoming:index||
+  <Section actionName="OpenUpcomingPage_HttpSniffer"
+           numberOfEventsTriggered="1"
+           tagList="pageName=upcoming:index||
                                 cc=USD||
                                 ch=upcoming||
                                 events=event2||"/>
 
-    <Section actionName="OpenWAATArticleOnBlog_HttpSniffer"
-             numberOfEventsTriggered="1"
-             tagList="caller=http://essenceoftesting.blogspot.com/2011/01/my-article-on-future-of-test-automation.html||
+  <Section actionName="OpenWAATArticleOnBlog_HttpSniffer"
+           numberOfEventsTriggered="1"
+           tagList="caller=http://essenceoftesting.blogspot.com/2011/01/my-article-on-future-of-test-automation.html||
                                 container=friendconnect||
                                 parent=http://essenceoftesting.blogspot.com/||"/>
+
+  <Section actionName="OpenAMirenaSecureSite_JsSniffer"
+           numberOfEventsTriggered="1"
+           tagList="dcssip=www.mirena.com||
+                        dcsuri=/en/privacy_statement_user.php||"/>
+
 </Sections>
