@@ -141,9 +141,14 @@ module WAAT
     logger.info("\tTest Data File Name: #{params[:test_data_file_name]}")
     logger.info("\tAction Name: #{params[:action_name]}")
 
-    if(@waat_plugin_type.upcase=="HTTP_SNIFFER")
+    params = symbolize_keys(params)
+    if(@waat_plugin_type.nil?)
+      logger.error("WAAT plugin not initialized. Have you invoked the initialize_waat method?")
+    elsif(@waat_plugin_type.upcase=="HTTP_SNIFFER")
+      logger.info("Verifying web analytics data for: #{params.inspect}")
       java_result = @engine_instance.verifyWebAnalyticsData(params[:test_data_file_name], params[:action_name], params[:url_patterns], params[:minimum_number_of_packets])
     else
+      logger.info("Verifying web analytics data for: #{params.inspect}")
       java_result = @engine_instance.verifyWebAnalyticsData(params[:test_data_file_name], params[:action_name], params[:url_patterns])
     end
 
@@ -164,6 +169,7 @@ module WAAT
                      :log4j_properties_absolute_file_path => File.join(File.dirname(__FILE__), "WAAT", "resources", "log4j.properties")}
 
     init_params = waat_defaults.merge(symbolize_keys(init_params))
+    logger.info("Initializing WAAT with following params: #{init_params.inspect}")
     @engine_instance ||=  controller.getInstance(
         web_analytic_tool(init_params[:waat_plugin]),
         input_file_type(init_params[:input_file_type]),
