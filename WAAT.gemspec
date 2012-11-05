@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anand Bagmar"]
-  s.date = %q{2012-10-16}
+  s.date = %q{2012-11-05}
   s.description = %q{An automated way of testing the Web Analytic tags reported to 'n' number of Web Analytic tools by your product. See here for more details: http://essenceoftesting.blogspot.com/search/label/waat}
   s.email = %q{abagmar@gmail.com}
   s.extra_rdoc_files = [
