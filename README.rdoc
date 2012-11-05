@@ -56,7 +56,7 @@ Some APIs have changed between v1.4.0 and v1.5.0.
     -
     v1.5.0: initialize_waat now takes an optional hash. See {WAAT.rb}[https://github.com/anandbagmar/WAAT-ruby/blob/master/lib/WAAT.rb] for usage information
 
-* Default plugin: Http_Sniffer
+* Default plugin: HttpSniffer
     v1.4.0 only supported the http_sniffer plugin.
     v1.5.0 supports http_sniffer and js_sniffer plugins, with http_sniffer being the default. To override, initialize WAAT using the following command:
     initialize_waat(:waat_plugin => "js_sniffer")
